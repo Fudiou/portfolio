@@ -1,0 +1,83 @@
+.main-container {
+  min-height: 100vh;
+}
+
+.profile-container {
+  min-height: 20vh;
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 3rem 1.5rem;
+}
+
+#profile-text {
+  margin-top: 1%;
+}
+
+#profile-pic {
+    margin-top: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+    transition: all .5s;
+    width: 160px;
+     height: 160px;
+  }
+  
+#profile-pic:hover {
+    transform: scale(1.2) rotate(5deg);
+  }
+
+#profile-text p {
+  margin-top: 1%;
+}
+
+.web-pages-container {
+  min-height: 20vh;
+}
+
+footer {
+  width: 100%;
+  min-height: 30px;
+  padding: 20px 0 40px 20px;
+}
+
+footer .copyright {
+  top: -8px;
+  margin-right: 20px;
+  font-size: .75em;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+a.social {
+  display: inline-block;
+  text-indent: -9999px;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: .5;
+  transition: all .25s;
+}
+
+
+a.linkedin {
+  background-image: url(images/linkedin.svg);
+}
+a.github {
+  background-image: url(images/github.svg);
+}
+
+a.social:hover {
+  opacity: 1;
+}
+.clearfix {
+  clear: both;
+}
