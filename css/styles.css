@@ -1,3 +1,14 @@
+/* Attributes */
+
+a {
+  text-decoration: none;
+  color: #0499ff;
+}
+a:hover {
+  color: #6633ff;
+}
+
+/* Main */
 .main-container {
   min-height: 100vh;
 }
@@ -14,17 +25,17 @@
 }
 
 #profile-pic {
-    margin-top: 50px;
-    border-radius: 50%;
-    border: 3px solid white;
-    transition: all .5s;
-    width: 160px;
-     height: 160px;
-  }
-  
+  margin-top: 50px;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: all 0.5s;
+  width: 160px;
+  height: 160px;
+}
+
 #profile-pic:hover {
-    transform: scale(1.2) rotate(5deg);
-  }
+  transform: scale(1.2) rotate(5deg);
+}
 
 #profile-text p {
   margin-top: 1%;
@@ -33,6 +44,8 @@
 .web-pages-container {
   min-height: 20vh;
 }
+
+/* Footer */
 
 footer {
   width: 100%;
@@ -43,7 +56,7 @@ footer {
 footer .copyright {
   top: -8px;
   margin-right: 20px;
-  font-size: .75em;
+  font-size: 0.75em;
 }
 
 footer ul {
@@ -63,16 +76,11 @@ a.social {
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
-  opacity: .5;
-  transition: all .25s;
+  opacity: 0.5;
+  transition: all 0.25s;
 }
-
-
-a.linkedin {
-  background-image: url(images/linkedin.svg);
-}
-a.github {
-  background-image: url(images/github.svg);
+a.twitter {
+  background-image: url(images/twitter.svg);
 }
 
 a.social:hover {
@@ -80,4 +88,12 @@ a.social:hover {
 }
 .clearfix {
   clear: both;
+}
+
+/* Larger Screens*/
+
+footer {
+  font-size: 1.3em;
+  max-width: 1200px;
+  margin: 40px auto;
 }
