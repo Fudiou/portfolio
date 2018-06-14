@@ -8,6 +8,12 @@ a:hover {
   color: #6633ff;
 }
 
+/* Nav Bar */
+.nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 /* Main */
 .main-container {
   min-height: 100vh;
