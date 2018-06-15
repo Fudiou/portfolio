@@ -26,3 +26,20 @@ function printGuitarBrand(guitarBrandHTML) {
   brandSelect.innerHTML = printGuitarInfo();
   brandSelect.addEventListener("click", guitarBrandHTML);
 }
+
+let searchButton = document.getElementById('searchButton');
+
+searchButton.addEventListener('click', function() {
+  let style = document.getElementById('guitarStyle').value;
+  let brand = document.getElementById('guitarBrand').value;
+
+  let guitarsArray = guitars.filter(guitar => (guitar.brand.toLocaleLowerCase() === brand && guitar.style.toLocaleLowerCase() === style));
+  let guitarHtml = '';
+
+  guitarsArray.forEach(guitar => {
+    guitarHtml += getGuitarHTML(guitar);
+  });
+
+  printGuitarInfo(guitarHtml);
+  
+});
