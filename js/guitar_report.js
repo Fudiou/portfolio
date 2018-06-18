@@ -16,30 +16,33 @@ let findGuitar = brand => {
 // Create Guitar HTML function which populates the data from the 2D array
 function getGuitarHTML(guitar) {
   return `<h2>${guitar.brand}</h2>
-    <p>${guitar.style}</p>
+    <h3>${guitar.style}</h3>
     <img src="${guitar.image}">
     <p>${guitar.description}</p>`;
 }
 
-function printGuitarBrand(guitarBrandHTML) {
-  let brandSelect = document.getElementById("guitarBrand");
-  brandSelect.innerHTML = printGuitarInfo();
-  brandSelect.addEventListener("click", guitarBrandHTML);
-}
+//Obtain the search button
+let searchButton = document.getElementById("searchButton");
+//When the button is clicked, query the 2 select values
+searchButton.addEventListener("click", function() {
+  let brand = document.getElementById("guitarBrand").value.toLowerCase();
+  let style = document.getElementById("guitarStyle").value.toLowerCase();
+  //Filter through the guitar array for the ones that have the same brand and style as the select values
+  let guitarsArray = guitars.filter(
+    guitar =>
+      guitar.brand.toLowerCase() === brand &&
+      guitar.style.toLowerCase() === style
+  );
 
-let searchButton = document.getElementById('searchButton');
-
-searchButton.addEventListener('click', function() {
-  let style = document.getElementById('guitarStyle').value;
-  let brand = document.getElementById('guitarBrand').value;
-
-  let guitarsArray = guitars.filter(guitar => (guitar.brand.toLocaleLowerCase() === brand && guitar.style.toLocaleLowerCase() === style));
-  let guitarHtml = '';
-
+  if (guitarsArray.length === 0) {
+    alert("No guitar found. Please select a different brand or style.");
+  }
+  //Loop through the array to create the html for each guitar
+  let guitarHtml = "";
   guitarsArray.forEach(guitar => {
     guitarHtml += getGuitarHTML(guitar);
   });
-
+  //Print the final string
   printGuitarInfo(guitarHtml);
-  
 });
+  
