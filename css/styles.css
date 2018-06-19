@@ -116,13 +116,6 @@ body {
 footer {
   width: 100%;
   min-height: 30px;
-  padding: 20px 0 40px 20px;
-}
-
-footer .copyright {
-  top: -8px;
-  margin-right: 20px;
-  font-size: 0.75em;
 }
 
 footer > div {
@@ -145,9 +138,6 @@ footer .social {
 
 footer .social:hover {
   opacity: 1;
-}
-.clearfix {
-  clear: both;
 }
 
 /* Larger Screens*/
